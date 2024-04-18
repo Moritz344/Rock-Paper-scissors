@@ -1,0 +1,60 @@
+import random 
+from termcolor import cprint
+def main():
+        game_list = ["Rock","Paper","Scissors"]
+        print("1. Rock")
+        print("2. Paper")
+        print("3. Scissors")
+        print()
+        choice = str(input("(1/2/3): "))
+        computer = random.choice(game_list)
+        if choice == "1":
+            print("You choose Rock.")
+            print(f"Bob chose: {computer}.")
+            if choice == "1" and computer == "Paper":
+                cprint("Bob won.","red")
+            elif choice == "1" and computer == "Rock":
+                  print("Nothing happend.")
+            elif choice == "1" and computer == "Scissors":
+                  cprint("You won.","green")
+            choice_2 = input("Do you want to go for another round?(j/n)")
+            if choice_2 == "j":
+                  main()
+            else:
+                  pass
+            
+            
+           
+            
+        elif choice == "2":
+              print("You chose Paper.")
+              print(f"Bob chose: {computer}.")
+              if choice == "2" and computer == "Rock":
+                    cprint("You won.","green")
+              elif choice == "2" and computer == "Scissors":
+                    cprint("Bob won.","red")
+              elif choice == "2" and computer == "Paper":
+                    cprint("You won.","green")
+              choice_2 = input("Do you want to go for another round?(j/n)")
+              if choice_2 == "j":
+                  main()
+              else:
+                    pass
+        elif choice == "3":
+              print("You chose Scissor.")
+              print(f"Bob chose {computer}.")
+
+              if choice == "3" and computer == "Rock":
+                    cprint("Bob won.","red")
+              elif choice == "3" and computer == "Paper":
+                    cprint("You won.","green")
+              elif choice == "3" and computer == "Scissors":
+                    print("Nothing happend.")
+              choice_2 = input("Do you want to go for another round?(j/n)")
+              if choice_2 == "j":
+                  main()
+              else:
+                    pass
+main()
+
+
